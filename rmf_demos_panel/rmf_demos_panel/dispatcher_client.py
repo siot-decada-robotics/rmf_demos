@@ -296,6 +296,9 @@ class DispatcherClient(Node):
             if task_json["task_type"] == "Clean":
                 request["category"] = "clean"
                 request["description"]["zone"] = desc["cleaning_zone"]
+            elif task_json["task_type"] == "Bookshelf":
+                request["category"] = "bookshelf"
+                request["description"]["book_zone"] = desc["bookshelf_zone"]
             elif task_json["task_type"] == "Loop":
                 request["category"] = "patrol"
                 request["description"]["places"] = [

@@ -29,6 +29,7 @@ setup(
           'dispatch_loop = rmf_demos_tasks.dispatch_loop:main',
           'dispatch_delivery = rmf_demos_tasks.dispatch_delivery:main',
           'dispatch_clean = rmf_demos_tasks.dispatch_clean:main',
+          'dispatch_bookshelf = rmf_demos_tasks.dispatch_bookshelf:main',
           'mock_docker = rmf_demos_tasks.mock_docker:main',
           'request_ackmann_path = rmf_demos_tasks.request_ackmann_path:main'
         ],

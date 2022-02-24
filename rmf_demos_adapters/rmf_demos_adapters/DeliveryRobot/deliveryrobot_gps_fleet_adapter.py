@@ -124,6 +124,10 @@ def initialize_fleet(config_yaml, nav_graph_path, node, use_sim_time):
         node.get_logger().info(
             f"Fleet [{fleet_name}] is configured to perform Clean tasks")
         task_capabilities.append(TaskType.TYPE_CLEAN)
+    if fleet_config['task_capabilities']['bookshelf']:
+        node.get_logger().info(
+            f"Fleet [{fleet_name}] is configured to perform Bookshelf tasks")
+        task_capabilities.append(TaskType.TYPE_BOOKSHELF)
 
     # Callable for validating requests that this fleet can accommodate
     def _task_request_check(task_capabilities, msg: TaskProfile):
